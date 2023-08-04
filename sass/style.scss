@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+$logo-text-fonts: 'Open Sans', sans-serif;
+$other-text-fonts: 'Roboto Condensed', sans-serif;
+$primary-color: #fff;
+$secondary-color: #000000;
+$text-pale-color: #c9c9c9;
+$text-pale-color1: #d1d0d0;
+$ruller: 12rem;
+
+*{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+     font-family: $other-text-fonts;
+}
+
+.big-text{
+     font-family: $logo-text-fonts;
+}
+.sub-text{
+     font-family: $other-text-fonts;
+}
+
+body{
+     // height: 400vh;
+}
+
+nav{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem $ruller;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 100;
+
+     .logo{
+          color: $primary-color;
+          font-weight: bold;
+          font-size: 1.3rem;
+     }
+     .nav-item{
+          width: 420px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          a{
+               cursor: pointer;
+               color: $text-pale-color;
+               text-decoration: none;
+               text-transform: capitalize;
+               font-size: .9rem;
+               font-weight: bold;
+               transition: color 0.2s ease;
+
+               &:hover{
+                    color: $primary-color;
+               }
+          }
+     }
+}
+   
+.home{
+     background-image: url('../vendor/main2.png');
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 100%;
+     height: 100vh;
+     position: relative;
+     
+     .cover{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          padding: 0 $ruller;
+          background-color: rgba(0,0,0,0.4);
+
+          .home-text{
+               position: absolute;
+               top: 45%;
+               width: 400px;
+               border: 2px solid $primary-color;
+               color: $primary-color;
+               padding: 1.5rem;
+
+               h1{
+                    font-family: $other-text-fonts;
+                    font-weight: lighter;
+                    font-size: 2.9rem;
+                    text-transform: uppercase;
+                    line-height: 3rem;
+                    letter-spacing: 4px;
+               }
+          }
+     }
+}
+
+.content{
+     padding: 6rem $ruller;
+     width: 100%;
+     height: 100vh;
+
+     .container{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          
+          .left{
+               position: absolute;
+               left: 0;
+               top: 0;
+               background-image: url('../vendor/secpage.jpg');
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+               width: 60%;
+               height: 85%;
+          }
+
+          .right{
+               position: absolute;
+               right: 0;
+               bottom: 0;
+               background-color: $primary-color;
+               width: 50%;
+               height: 70%;
+               z-index: 10;
+               padding: 4rem;
+               color: $primary-color;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+
+               h2{
+                    font-family: $other-text-fonts;
+                    font-weight: lighter;
+                    font-size: 2.4rem;
+                    text-transform: uppercase;
+                    letter-spacing: 4px;
+                    line-height: 2.8rem;
+                    color: $secondary-color;
+               }
+               small{
+                    font-family: $other-text-fonts;
+                    color: $text-pale-color;
+                    line-height: 1.5rem;
+                    letter-spacing: 1px;
+               }
+          }
+     }
+}
+
+.list-section{
+     padding: 0 $ruller;
+     height: 100%;
+     margin: 1rem 0 8rem;
+
+     .header{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 3rem;
+
+          h1{
+               text-transform: capitalize;
+               font-size: 2.5rem;
+               letter-spacing: 2px;
+               font-weight: lighter;
+               color: $secondary-color;
+          }
+          a{
+               padding: .8rem 2rem;
+               border: 1px solid $secondary-color;
+               text-transform: uppercase;
+               transition: background-color 0.3s ease,color 0.3s ease;
+               background-color: transparent;
+               cursor: pointer;
+               text-decoration: none;
+               color: $secondary-color;
+               font-size: .8rem;
+               font-weight: bold;
+               letter-spacing: 2px;
+
+               &:hover{
+                    background-color: $secondary-color;
+                    color: $primary-color;
+               }
+          }
+     }
+     .list{
+          display: flex;
+          justify-content: center;
+          flex: 1 1;
+          flex-wrap: wrap;
+          gap: 2rem;
+          width: 100%;
+
+          .item{
+               width: calc((100%/4) - 1.5rem);    
+               height: 350px;
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+               padding: 1rem;
+               position: relative;
+
+               h2{
+                    position: absolute;
+                    bottom: 1rem;
+                    font-weight: lighter;
+                    font-size: 1.8rem;
+                    text-transform: uppercase;
+                    color: $primary-color;
+                    letter-spacing: 2px;
+               }
+          }
+
+     }
+}
+
+footer{
+     padding: 2rem $ruller;
+     height: 140px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     background-color: $secondary-color;
+
+     .top{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .logo{
+               text-transform: lowercase;
+               color: $primary-color;
+               font-size: 1.5rem;
+               font-weight: bold;
+          }
+
+          .social{
+               width: 150px;
+               display: flex;
+               justify-content: space-between;
+
+               a{
+                    text-decoration: none;
+
+                    img{
+                         width: 25px;
+                    }
+               }
+          }
+     }
+
+     .bottom{
+          display: flex;
+          justify-content: space-between;
+
+          .sub{
+               width: 40%;
+               display: flex;
+               justify-content: space-between;
+
+               a{
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    color: $text-pale-color;
+                    transition: color 0.3s ease;
+
+                    &:hover{
+                         color: $primary-color;
+                    }
+               }
+          }
+
+          small{
+               color: $text-pale-color1;
+          }
+     }
+}
